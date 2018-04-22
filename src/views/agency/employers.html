@@ -1,21 +1,582 @@
-<table id="table_id" class="display">
-    <thead>
-    <tr>
-        <th>Column 1</th>
-        <th>Column 2</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-        <td>Row 1 Data 1</td>
-        <td>Row 1 Data 2</td>
-    </tr>
-    <tr>
-        <td>Row 2 Data 1</td>
-        <td>Row 2 Data 2</td>
-    </tr>
-    </tbody>
-</table>
+<script src="js/views/datatable.js"></script>
+
+<div class="animated fadeIn">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-header">
+                    <i class="fa fa-align-justify"></i>Pracodawcy
+                </div>
+
+                <div class="card-body">
+                    <table id="employess" class="table table-responsive-sm table-hover table-outline">
+                        <thead class="thead-light">
+                        <tr>
+                            <th class="text-center"><i class="icon-people"></i></th>
+                            <th>Użytkownik</th>
+                            <th class="text-center">Kraj</th>
+                            <th>Zawód</th>
+                            <th>Pracodawca</th>
+
+                            <th>Umowa</th>
+
+                            <th class="text-center">Akcje</th>
+                            <th class="text-center">Status</th>
+
+
+
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <a class="btn btn-success pull-right" data-toggle="modal" data-target="#successModal" style="margin-right: 30px;"href="#">
+                            <i class="fa fa-plus "></i>
+                        </a>
+
+                        <!-- WPIS -->
+                        <tr>
+                            <td class="text-center">
+                                <div class="avatar">
+                                    <img src="img/avatars/1.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                                    <span class="avatar-status badge-success"></span>
+                                </div>
+                            </td>
+                            <td>
+                                <div>Bsasha Dimitrov</div>
+                                <div class="small text-muted">
+                                    Zarejestrowany: Jan 1, 2015
+                                </div>
+                            </td>
+                            <td class="text-center">
+                                <i class="flag-icon flag-icon-ru h4 mb-0" title="us" id="us"></i>
+                            </td>
+                            <td>
+                                <div>Super Firma XYZ</div>
+                            </td>
+                            <td>
+                                <div>Krawiec</div>
+                            </td>
+                            <td>
+                                <div class="small text-muted">Zawarta do:</div>
+                                <strong>12.12.2020</strong>
+                            </td>
+
+
+
+                            <td class="text-center">
+                                <a class="btn btn-success" href="#" data-toggle="modal" data-target="#successModal">
+                                    <i class="fa fa-edit "></i>
+                                </a>
+
+                                <a class="btn btn-danger" href="#"  data-toggle="modal" data-target="#dangerModal">
+                                    <i class="fa fa-trash-o "></i>
+                                </a>
+
+                                <a class="btn btn-info" href="#" data-toggle="modal" data-target="#infoModal">
+                                    <i class="fa fa-search-plus "></i>
+                                </a>
+
+                            </td>
+
+                            <td class="text-center">
+
+                                <div class="form-group">
+                                    <select class="form-control badge btn" id="ccyear" data-style="btn-primary">
+                                        <option value="1" class="badge badge-success" >
+                                            <a class="btn" href="#">
+                                                <span>Aktywny</span>
+                                            </a>
+                                        </option>
+                                        <option value="2" class="badge badge-dark">
+                                            <a class="btn" href="#">
+                                                <span>Nieaktywny</span>
+                                            </a>
+                                        </option>
+                                    </select>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <!-- KONIEC WPISU -->
+
+                        <!-- WPIS -->
+                        <tr>
+                            <td class="text-center">
+                                <div class="avatar">
+                                    <img src="img/avatars/1.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                                    <span class="avatar-status badge-success"></span>
+                                </div>
+                            </td>
+                            <td>
+                                <div>Bsasha Dimitrov</div>
+                                <div class="small text-muted">
+                                    Zarejestrowany: Jan 1, 2015
+                                </div>
+                            </td>
+                            <td class="text-center">
+                                <i class="flag-icon flag-icon-ru h4 mb-0" title="us" id="us"></i>
+                            </td>
+                            <td>
+                                <div>Super Firma XYZ</div>
+                            </td>
+                            <td>
+                                <div>Krawiec</div>
+                            </td>
+                            <td>
+                                <div class="small text-muted">Zawarta do:</div>
+                                <strong>12.12.2020</strong>
+                            </td>
+
+
+
+                            <td class="text-center">
+                                <a class="btn btn-success" href="#" data-toggle="modal" data-target="#successModal">
+                                    <i class="fa fa-edit "></i>
+                                </a>
+
+                                <a class="btn btn-danger" href="#"  data-toggle="modal" data-target="#dangerModal">
+                                    <i class="fa fa-trash-o "></i>
+                                </a>
+
+                                <a class="btn btn-info" href="#" data-toggle="modal" data-target="#infoModal">
+                                    <i class="fa fa-search-plus "></i>
+                                </a>
+
+                            </td>
+
+                            <td class="text-center">
+
+                                <div class="form-group">
+                                    <select class="form-control badge btn" id="ccyear" data-style="btn-primary">
+                                        <option value="1" class="badge badge-success" >
+                                            <a class="btn" href="#">
+                                                <span>Aktywny</span>
+                                            </a>
+                                        </option>
+                                        <option value="2" class="badge badge-dark">
+                                            <a class="btn" href="#">
+                                                <span>Nieaktywny</span>
+                                            </a>
+                                        </option>
+                                    </select>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <!-- KONIEC WPISU -->
+
+                        <!-- WPIS -->
+                        <tr>
+                            <td class="text-center">
+                                <div class="avatar">
+                                    <img src="img/avatars/1.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                                    <span class="avatar-status badge-success"></span>
+                                </div>
+                            </td>
+                            <td>
+                                <div>Bsasha Dimitrov</div>
+                                <div class="small text-muted">
+                                    Zarejestrowany: Jan 1, 2015
+                                </div>
+                            </td>
+                            <td class="text-center">
+                                <i class="flag-icon flag-icon-ru h4 mb-0" title="us" id="us"></i>
+                            </td>
+                            <td>
+                                <div>Super Firma XYZ</div>
+                            </td>
+                            <td>
+                                <div>Krawiec</div>
+                            </td>
+                            <td>
+                                <div class="small text-muted">Zawarta do:</div>
+                                <strong>12.12.2020</strong>
+                            </td>
+
+
+
+                            <td class="text-center">
+                                <a class="btn btn-success" href="#" data-toggle="modal" data-target="#successModal">
+                                    <i class="fa fa-edit "></i>
+                                </a>
+
+                                <a class="btn btn-danger" href="#"  data-toggle="modal" data-target="#dangerModal">
+                                    <i class="fa fa-trash-o "></i>
+                                </a>
+
+                                <a class="btn btn-info" href="#" data-toggle="modal" data-target="#infoModal">
+                                    <i class="fa fa-search-plus "></i>
+                                </a>
+
+                            </td>
+
+                            <td class="text-center">
+
+                                <div class="form-group">
+                                    <select class="form-control badge btn" id="ccyear" data-style="btn-primary">
+                                        <option value="1" class="badge badge-success" >
+                                            <a class="btn" href="#">
+                                                <span>Aktywny</span>
+                                            </a>
+                                        </option>
+                                        <option value="2" class="badge badge-dark">
+                                            <a class="btn" href="#">
+                                                <span>Nieaktywny</span>
+                                            </a>
+                                        </option>
+                                    </select>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <!-- KONIEC WPISU -->
+
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- MODAL DODAWANIA/EDYCJI DANYCH -->
+<div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-success" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Dodaj nowego pracownika</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="row">
+                <div class="col">
+
+                    <div class="card-body">
+                        <ul class="nav nav-tabs" id="myTabEdit" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="primary-tab" data-toggle="tab" href="#primary" role="tab" aria-controls="primary" aria-selected="true">Podstawowe</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Kontakt</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="advanced-tab" data-toggle="tab" href="#advanced" role="tab" aria-controls="advanced" aria-selected="false">Zaawansowane</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="notes-tab" data-toggle="tab" href="#notes" role="tab" aria-controls="notes" aria-selected="false">Notatki</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="myTabEditContent">
+                            <div class="tab-pane fade show active" id="primary" role="tabpanel" aria-labelledby="primary-tab">
+                                <div class="form-group">
+                                    <label for="name">Imię</label>
+                                    <input type="text" class="form-control" id="name" placeholder="">
+                                </div>
+                                <div class="form-group">
+                                    <label for="surname">Nazwisko</label>
+                                    <input type="text" class="form-control" id="surname" placeholder="">
+                                </div>
+                                <div class="form-group">
+                                    <label for="nationality">Kraj pochodzenia</label>
+                                    <input type="text" class="form-control" id="nationality" placeholder="">
+                                </div>
+                                <div class="form-group">
+                                    <label for="profession">Zawód</label>
+                                    <input type="text" class="form-control" id="profession" placeholder="">
+                                </div>
+                                <div class="form-group">
+                                    <label for="employer">Pracodawca</label>
+                                    <select id="employer" name="employer" class="form-control">
+                                        <option value="0">Brak</option>
+                                        <option value="1">Firma XYZ</option>
+                                        <option value="2">Firma ABC</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="select1">Płeć</label>
+                                    <select id="select1" name="select1" class="form-control">
+                                        <option value="0">Brak</option>
+                                        <option value="1">Mężczyzna</option>
+                                        <option value="2">Kobieta</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label class="col-md-3 col-form-label" for="file-input">Zdjęcie</label>
+                                    <div class="col-md-9">
+                                        <input type="file" id="file-input" name="file-input">
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                                <div class="form-group">
+                                    <label for="country">Kraj</label>
+                                    <input type="text" class="form-control" id="country" placeholder="">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="street">Ulica</label>
+                                    <input type="text" class="form-control" id="street" placeholder="">
+                                </div>
+
+                                <div class="row">
+
+                                    <div class="form-group col-sm-8">
+                                        <label for="city">Miasto</label>
+                                        <input type="text" class="form-control" id="city" placeholder="">
+                                    </div>
+
+                                    <div class="form-group col-sm-4">
+                                        <label for="postal-code">Kod pocztowy</label>
+                                        <input type="text" class="form-control" id="postal-code" placeholder="">
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="advanced" role="tabpanel" aria-labelledby="advanced-tab">
+                                <div class="form-group">
+                                    <label for="dateofbirth">Data urodzenia</label>
+                                    <input type="text" class="form-control" id="dateofbirth" placeholder="">
+                                </div>
+                                <div class="form-group">
+                                    <label for="placeofbirth">Miejsce urodzenia</label>
+                                    <input type="text" class="form-control" id="placeofbirth" placeholder="">
+                                </div>
+
+
+                            </div>
+
+                            <div class="tab-pane fade" id="notes" role="tabpanel" aria-labelledby="notes-tab">
+                                <div class="form-group">
+                                    <label for="textarea-input">Notatka o pracowniku</label>
+                                    <textarea id="textarea-input" name="textarea-input" rows="9" class="form-control" placeholder=""></textarea>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Zamknij</button>
+                <button type="button" class="btn btn-success">Dodaj pracownik</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+
+<!-- MODAL USUWANIA -->
+<div class="modal fade" id="dangerModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-danger" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Usuwanie pracownika</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Czy napewno chcesz usunąć tego pracownika?</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Nie</button>
+                <button type="button" class="btn btn-danger">Tak, chcę</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+
+
+<!-- MODAL PODGLĄDU DANYCH -->
+<div class="modal fade" id="infoModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-info" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Podgląd danych</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col">
+                        <div class="card-body">
+                            <div class="mb-4" align="center">
+                                <img alt="User Pic" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzaLMnex1QwV83TBQgxLTaoDAQlFswsYy62L3mO4Su-CMkk3jX" class="img-circle img-responsive">
+                            </div>
+                            <ul class="nav nav-tabs" id="myTabView" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" id="primary-tab-view" data-toggle="tab" href="#primary-view" role="tab" aria-controls="primary-view" aria-selected="true">Podstawowe</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="contact-tab-view" data-toggle="tab" href="#contact-view" role="tab" aria-controls="contact-view" aria-selected="false">Kontakt</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="advanced-tab-view" data-toggle="tab" href="#advanced-view" role="tab" aria-controls="advanced-view" aria-selected="false">Zaawansowane</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="notes-tab-view" data-toggle="tab" href="#notes-view" role="tab" aria-controls="notes-view" aria-selected="false">Notatki</a>
+                                </li>
+                            </ul>
+                            <div class="tab-content" id="myTabViewContent">
+                                <div class="tab-pane fade show active" id="primary-view" role="tabpanel" aria-labelledby="primary-tab-view">
+
+
+
+                                    <table class="table table-user-information">
+                                        <tbody>
+                                        <tr>
+                                            <td><b>Imię</b></td>
+                                            <td>Anna</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>Nazwisko</b></td>
+                                            <td>Bez</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>Kraj Pochodzenia</b></td>
+                                            <td>Polska</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>Zawód</b></td>
+                                            <td>Krawcowa</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>Pracodawca</b></td>
+                                            <td>Firma ABC</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>Płeć</b></td>
+                                            <td>Female</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="tab-pane fade" id="contact-view" role="tabpanel" aria-labelledby="contact-tab-view">
+                                    <table class="table table-user-information">
+                                        <tbody>
+                                        <tr>
+                                            <td><b>Imię</b></td>
+                                            <td>Anna</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>Nazwisko</b></td>
+                                            <td>Bez</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>Kraj Pochodzenia</b></td>
+                                            <td>Polska</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>Zawód</b></td>
+                                            <td>Krawcowa</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>Pracodawca</b></td>
+                                            <td>Firma ABC</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>Płeć</b></td>
+                                            <td>Female</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="tab-pane fade" id="advanced-view" role="tabpanel" aria-labelledby="advanced-tab-view">
+                                    <table class="table table-user-information">
+                                        <tbody>
+                                        <tr>
+                                            <td><b>Imię</b></td>
+                                            <td>Anna</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>Nazwisko</b></td>
+                                            <td>Bez</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>Kraj Pochodzenia</b></td>
+                                            <td>Polska</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>Zawód</b></td>
+                                            <td>Krawcowa</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>Pracodawca</b></td>
+                                            <td>Firma ABC</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>Płeć</b></td>
+                                            <td>Female</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <div class="tab-pane fade" id="notes-view" role="tabpanel" aria-labelledby="notes-tab-view">
+                                    <table class="table table-user-information">
+                                        <tbody>
+                                        <tr>
+                                            <td><b>Imię</b></td>
+                                            <td>Anna</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>Nazwisko</b></td>
+                                            <td>Bez</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>Kraj Pochodzenia</b></td>
+                                            <td>Polska</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>Zawód</b></td>
+                                            <td>Krawcowa</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>Pracodawca</b></td>
+                                            <td>Firma ABC</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>Płeć</b></td>
+                                            <td>Female</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Zamknij</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+
+
+
 
 
 
